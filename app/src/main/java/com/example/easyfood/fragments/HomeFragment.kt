@@ -14,6 +14,7 @@ import com.example.easyfood.activities.MealActivity
 import com.example.easyfood.adapters.CategoriesAdapter
 import com.example.easyfood.adapters.MostPopularAdapter
 import com.example.easyfood.databinding.FragmentHomeBinding
+import com.example.easyfood.pojo.Category
 import com.example.easyfood.pojo.MealsByCategory
 import com.example.easyfood.pojo.Meal
 import com.example.easyfood.viewModel.HomeViewModel
@@ -87,7 +88,7 @@ class HomeFragment : Fragment() {
     /*******Observer*******/
     private fun observerCategoriesLiveData() {
         homeViewModel.observerCategoriesLiveData().observe(viewLifecycleOwner){ categories ->
-            categoriesAdapter.setCategoryList(categories)
+            categoriesAdapter.setCategoryList(categories as ArrayList<Category>)
         }
     }
 
