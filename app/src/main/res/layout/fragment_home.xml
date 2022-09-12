@@ -115,22 +115,22 @@
                 app:layout_constraintTop_toBottomOf="@id/rv_meals_popular"/>
 
             <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_25sdp"
-        android:layout_marginEnd="@dimen/_25sdp"
-        app:cardCornerRadius="@dimen/_10sdp"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_categories">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_categories">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_categories"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"/>
 
-    </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
