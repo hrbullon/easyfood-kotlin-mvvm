@@ -23,10 +23,10 @@ class CategoryMealsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_meals)
 
-        prepareRecyclerView()
-
         binding = ActivityCategoryMealsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        prepareRecyclerView()
 
         //Connect HomeFragment with HomeViewModel
         categoryMealsViewModel = ViewModelProvider(this)[CategoryMealsViewModel::class.java]

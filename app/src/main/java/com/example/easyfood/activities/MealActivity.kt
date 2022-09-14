@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.easyfood.R
@@ -54,9 +55,9 @@ class MealActivity : AppCompatActivity() {
         mealViewModel.observerMealDetailsLiveData().observe(this)
         { meal ->
             onResponseCase()
-            binding.tvCategory.text = "Category: ${meal!!.strCategory}"
-            binding.tvArea.text = "Area: ${meal!!.strArea}"
-            binding.tvInstructionsText.text = "Category: ${meal!!.strInstructions}"
+            binding.tvCategory.text = "Category: ${meal.strCategory}"
+            binding.tvArea.text = "Area: ${meal.strArea}"
+            binding.tvInstructionsText.text = "Category: ${meal.strInstructions}"
 
             youtubeLink = meal.strYoutube
         }
@@ -69,8 +70,8 @@ class MealActivity : AppCompatActivity() {
             .into(binding.imgMealDetail)
 
         binding.collapsingToolbar.title = mealName
-        binding.collapsingToolbar.setCollapsedTitleTextColor( resources.getColor(R.color.white) )
-        binding.collapsingToolbar.setExpandedTitleColor( resources.getColor(R.color.white) )
+        binding.collapsingToolbar.setCollapsedTitleTextColor( ContextCompat.getColor(this, R.color.white))
+        binding.collapsingToolbar.setExpandedTitleColor( ContextCompat.getColor(this, R.color.white) )
     }
 
     private fun getMealInformationFromIntent() {
